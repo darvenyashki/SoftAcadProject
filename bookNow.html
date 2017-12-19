@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Villas Elafonisi">
+    <meta name="author" content="Svilen Darvenyashki">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/title-image.png" />
+    <link rel="stylesheet" type="text/css" href="css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="tooltip-templates">
+        <div class="tooltip-content" id="tooltipCardNumber">
+            <img src="images/tooltip/tooltip-cardNumber.png" class="tooltip-images">
+            <p>Please enter the 16 digits without intervals!</p>
+        </div>
+        <div class="tooltip-content" id="tooltipCardHolder">
+            <img src="images/tooltip/tooltip-cardHolder.png" class="tooltip-images">
+            <p>Please enter your name exactly as it appears on your card! /two words with one interval/</p>
+        </div>
+        <div class="tooltip-content" id="tooltipSecurityCode">
+            <img src="images/tooltip/tooltip-securityCode.png" class="tooltip-images">
+            <p>Please enter the 3 digits on the back of your card!</p>
+        </div>
+        <div class="tooltip-content" id="tooltipExpDate">
+            <img src="images/tooltip/tooltip-expDate.png" class="tooltip-images">
+            <p>Please enter expiration date and year of your card!</p>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="wrapper">
+            <div class="hamburger-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="index.html" class="logo">
+                <!-- -->
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="WhyUs.html" class="nav-link">Why Our Villas</a>
+                <div id="dropdown">Villas
+                    <div id="dropdown-content">
+                        <a href="royal.html">Royal Spa Pool Villa</a>
+                        <a href="presidential.html">Presidential Spa Pool Villa</a>
+                        <a href="beach.html">Beach Front Pool Villa</a>
+                    </div>
+                </div>
+                <a href="contactUs.html" class="nav-link">Contact Us</a>
+                <a href="bookNow.html" class="nav-link">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="book-now-section">
+        <div class="wrapper">
+            <h2 class="section-heading">Book your stay</h2>
+            <form id="bookNowForm" method="post">
+                <div id="nav">
+                    <span class="form-btn">Booking</span>
+                    <span class="form-btn">Personal</span>
+                    <span class="form-btn">Details</span>
+                    <span class="form-btn">Finish</span>
+                </div>
+                <div class="form-section">
+                    <div class="chose-villa">
+                        <span class="form-heading center-smth">Choose your villa:</span>
+                        <div class="book-villa">
+                            <label for="royalVillaForm">
+                        <img src="images/villas/royal/royal-1.png">
+                        <h4>Royal Spa Pool Villa</h4>
+                            <span class="book-price">2350$ / night</span>
+                            </label>
+                            <input type="radio" name="choose-your-villa" value="Royal Spa Pool Villa" id="royalVillaForm" price="2350">
+                        </div>
+                        <div class="book-villa">
+                            <label for="presidentialVillaForm"> <img src="images/villas/presidential/presidential-1.png">
+                        <h4>Presidential Spa Pool Villa</h4>
+                            <span class="book-price">2200$ / night</span>
+                        </label>
+                            <input type="radio" name="choose-your-villa" value="Presidential Spa Pool Villa" id="presidentialVillaForm" price="2200">
+                        </div>
+                        <div class="book-villa">
+                            <label for="beachVillaForm">  <img src="images/villas/beach/beach-1.png">
+                        <h4>Beach Front Pool Villa</h4>
+                            <span class="book-price">2095$ / night</span>
+                          </label>
+                            <input type="radio" name="choose-your-villa" value="Beach View Pool Villa" id="beachVillaForm" price="2095">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-entry-holder">
+                            <p> <input type="text" class="text-entry" name="from" id="from"><label for="from" class="text-label">Arrival Date</label></p>
+                        </div>
+                        <div class="form-entry-holder">
+                            <p> <input type="text" class="text-entry" name="to" id="to"><label for="to" class="text-label">Departure Date</label></p>
+                        </div>
+                    </div>
+                    <div class="stay-price">
+                        <span class="bigger" id="numOfDays"></span> nights
+                        <!--in  <span id="chosenVilla"></span>-->/ <span class="bigger" id="totalPrice"></span>.
+                    </div>
+                    <div class="next btn" id="next-to-second">
+                        Next
+                    </div>
+                </div>
+                <div class="form-section">
+                    <span class="form-heading center-smth">Personal Information</span>
+                    <div>
+                        <span class="title"><input type="radio" class="title" name="titles" value="Mr." id="mr" checked> <label for="mr">Mr.</label></span>
+                        <span class="title"> <input type="radio" class="title" name="titles" value="Ms." id="ms"> <label for="ms">Ms.</label></span>
+                        <span class="title">  <input type="radio" class="title" name="titles" value="Mrs." id="mrs"> <label for="mrs">Mrs.</label></span>
+                    </div>
+                    <div class="form-entry-holder">
+                        <input type="text" class="text-entry" name="fname" id="fName"><label for="fName" class="text-label">First name</label>
+                    </div>
+                    <div class="form-entry-holder">
+                        <input type="text" class="text-entry" name="lname" id="lName"><label for="lName" class="text-label">Last name</label>
+                    </div>
+                    <div class="form-entry-holder">
+                        <input type="email" class="text-entry" name="email" id="eMail"><label for="eMail" class="text-label">E-mail</label>
+                    </div>
+                    <div class="form-entry-holder">
+                        <input type="text" class="text-entry" name="phone" id="num"><label for="num" class="text-label">Phone</label>
+                    </div>
+                    <div class="prev btn" id="prev" onclick="plusDivs(-1)">
+                        Prev
+                    </div>
+                    <div class="next btn" id="next-to-third">
+                        Next
+                    </div>
+                </div>
+                <div class="form-section">
+                    <span class="form-heading center-smth">Booking Details</span>
+                    <div class="book-info">
+                        <div class="bd-line"><span class="user-text" id="bdTitle"></span><span class="user-text" id="bdFirstName"> </span><span class="user-text" id="bdLastName"> </span></div>
+                        <div class="bd-line"><span class="user-text" id="bdEmail"></span></div>
+                        <div class="bd-line"><span id="bdPhone"></span></div>
+                        <div class="bd-line">Chosen Villa: <br> <span class="user-text" id="bdVilla"></span></div>
+                        <div class="book-date">
+                            <div class="bd-line">Arrival Date: <span class="user-text" id="bdArrDate"></span></div>
+                            <div class="bd-line">Departure Date: <br> <span class="user-text" id="bdDepDate"></span></div>
+                        </div>
+                        <div class="bd-line"><span class="user-text" id="nights"></span><span class="user-text" id="priceTotal"></span></div>
+                    </div>
+                    <div class="prev btn" id="prev" onclick="plusDivs(-1)">
+                        Prev
+                    </div>
+
+                    <div class="next btn" id="next-to-payment" onclick="plusDivs(1)">
+                        Payment
+
+                    </div>
+                </div>
+                <div class="form-section">
+                    <span class="form-heading center-smth">Payment</span>
+                    <p class="mini-text">In order to complete your reservation you myst pre-pay 50% (<span id="halfPrice"></span>) of the full price</p>
+                    <p class="mini-text warning-text">WARNING: This is a sample website for school project. Please DO NOT apply real information!</p>
+                    <div class="form-entry-holder">
+                        <input type="text" class="text-entry tooltip" data-tooltip-content="#tooltipCardNumber" name="card-number" id="cardNumber"><label for="cardNumber" class="text-label">Card Number</label>
+                    </div>
+                    <div class="form-entry-holder">
+                        <input type="text" class="text-entry tooltip" data-tooltip-content="#tooltipCardHolder" name="holder" id="cardHolder"><label for="cardHolder" class="text-label">Card Holder</label>
+                    </div>
+                    <div class="form-entry-holder security-code-holder">
+                        <input type="text" class="text-entry tooltip" data-tooltip-content="#tooltipSecurityCode" name="card-code" id="cardCode"><label for="cardCode" class="text-label">Security Code</label>
+                    </div>
+                    <p class="exp-date-text">Expiration Date:</p>
+                    <div class="form-entry-holder exp-date">
+                        <input type="text" class="text-entry exp-date-holder tooltip" data-tooltip-content="#tooltipExpDate" name="mmCard" id="mmCard" placeholder="MM">
+                        <input type="text" class="text-entry exp-date-holder tooltip" data-tooltip-content="#tooltipExpDate" name="yyCard" id="yyCard" placeholder="YY">
+                    </div>
+                    <div class="t-c">
+                        <input type="checkbox" name="readTermsAndCon" id="readTermsAndCon" /> <label for="readTermsAndCon">I have read and agree with </label><span id="myBtn">Terms and Conditions</span>
+                    </div>
+                    <input type="submit" value="Submit" class="next btn submit">
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5 class="modal-text-heading">Terms and Conditions</h5>
+            <p>The customer, by booking the property or signing the Booking Form, agrees to abide by the following Rental Conditions: Payment: In order to confirm your booking, a deposit of 25% is required on the total cost of accommodation. The remaining amount must be paid in 3 equal installments. The final installment may be paid three weeks prior to your arrival. Travel insurance is strongly recommended as it covers not only cancellations on medical grounds or death, a doctor’s note would have to accompany any claim made against the travel insurance. Lost luggage is also covered and any medical expenses incurred while on holiday, in some cases repatriation and air ambulance is also provided under the conditions of the travel insurance.</p>
+            <h5 class="modal-text-heading">Accommodation</h5>
+            <p>Accommodation is only for the use of those people named at the time of booking and if you wish to add members to your party, you should advise in writing, with any extra payment due. Accommodation is available to you at the earliest between 14:00 p.m. on date of arrival and we would appreciate that you vacate by 10:00 a.m. on date of departure. The accommodation cost includes: electricity, linen, towels and cleaning prior to arrival. Linen is provided 2 times per week. Any damage or breakage should be notified and appropriate payment made to our local representative, prior to your departure. We reserve the right to charge for breakage and damage not reported and discovered later. A 300 Euro returnable security deposit is required with the final rental payment or upon arrival and will be returned in full if no damage or loss has occurred.</p>
+            <h5 class="modal-text-heading">Cancelation</h5>
+            <p>We require to be advised in writing. Our charges which are not refundable, are as follows: Cancellation received more than 60 days prior to arrival date, 50% of the deposited rental amount Cancellation received 40 to 60 days prior to arrival date, 80% of the deposited rental amount Cancellation received 40 days or less prior to arrival date, 100% of the deposited rental amount For Non-Show, 100% cancellation fee.</p>
+            <h5 class="modal-text-heading"> PROPERTY OWNER’S DISCLAIMER</h5>
+            <p>THE VILLAS does not accept any liability for any loss, damage, or additional expenses incurred by the client or any member of the client’s party regardless of the cause. THE VILLAS does not accept liability for any injury, death, loss, inconvenience or damage, alteration, delay or cancellation of the booking as a result of war, threat of war, riot or civil strife, terrorist activity (threatened or actual), natural disaster, fire, sickness, weather conditions, action at an airport or port by any government or public authority, technical problems relating to transport and airport regulations caused by technical, mechanical or electrical breakdowns or with the client’s accommodation or other circumstances as amounting to ‘force majeure’ or Acts of God or other similar events beyond the property owner’s control. In addition, THE VILLAS is not responsible for any physical injuries caused to the customers during their stay at the property. The properties that THE VILLAS offers are not official tourist structures or hotels. Rather, they are private homes. Being such, they do not have standards or categories recognized internationally, but instead reflect in their architecture and furnishings the local traditions and personal taste of the owners. Customers much accept differences in the properties, be them architectural or cultural, relative to their own homes. It is, therefore, highly recommended that the customers purchase comprehensive travel insurance prior to their trip. </p>
+            <h5 class="modal-text-heading"> EXTERNAL MAINTENANCE</h5>
+            <p>The owner or his/her representative have, if necessary, free access to the property for essential maintenance purposes (garden, swimming pool, etc.).</p>
+            <h5 class="modal-text-heading">Complaints </h5>
+            <p>The enjoyment of your holidays is of prime importance to us. If you have a problem, you should immediately report it to our representative in Livadia (details of which are included in your travel documents), while you should inform THE VILLAS via e-mail on the exact problem so that we have the opportunity to resolve the issue immediately. If we are not aware of the problem or complaint we cannot begin resolving it. </p>
+            <h5 class="modal-text-heading">NUMBER OF PERSONS</h5>
+            <p>The number of persons (adults and children) may not exceed the maximum number of sleeping places indicated in the property description. </p>
+            <h5 class="modal-text-heading">WE RESERVE THE RIGHT</h5>
+            <p>We reserve the right to cancel the booking if the balance is not paid by the due date. Personal Insurance: All our clients-tenants are required to have taken out personal insurance to cover all eventualities. (Personal travel insurance, life, accident and sickness, damages to the property)</p>
+            <h5 class="modal-text-heading">contitions:</h5>
+            <p>When accepting your booking, it will be understood that you are agreeing to the Booking Conditions on behalf of all members of your party. Statement of client – tenant: I have read and understood and we agree to accept and abide by the terms and conditions of booking as detailed on behalf of all persons for whom booking is made and I confirm that I am authorized to act on their behalf.</p>
+            <h5 class="modal-text-heading">JURISDICTION:</h5>
+            <p>In the event of controversy arising from the booking and property rental, only the Chania Crete Courts can deal with the matter. By confirming the booking, the customer implies that thevillas.gr Rental Conditions have been understood and have been accepted without reserve and without exception. If any of the conditions of this contract have become invalid or were invalid or if in this contract there should be a gap, the other conditions cannot be contested.</p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="wrapper">
+            <div class="footer-section site-nav">
+                <h4>Elafonisi Villas</h4>
+                <a href="index.html">Home</a>
+                <a href="WhyUs.html">Why Elafonisi Villas</a>
+                <a href="royal.html">Royal Spa Pool Villa</a>
+                <a href="presidential.html">Presidential Spa Pool Villa</a>
+                <a href="beach.html">Beach View Pool Villa</a>
+            </div>
+            <div class="footer-section contact-us">
+                <h4>Contact Us</h4>
+                <p>Svilen Darvenyashki</p>
+                <p>S.Darvenyashki & Synergates E.E.,<br> Livadia 73100 - Kissamos, Chania, Crete<br>
+            </div>
+            <div class="footer-section find-us">
+                <h4>Find Us</h4>
+                <p>Tel: +30 6937297441,</p>
+                <p>Email: info@elafonisivillas.gr</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <p><a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-skype"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="script/tooltipster.bundle.min.js"></script>
+    <script src="script/dropdown.js"></script>
+    <script src="script/book-script.js"></script>
+</body>
+
+</html>

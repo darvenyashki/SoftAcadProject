@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Luxury Villas Elafonisi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxury Villas Elafonisi">
+    <meta name="author" content="Svilen Darvenyashki">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/title-image.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.scss" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.scss" />
+    <link rel="stylesheet" type="text/css" href="css/main-style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="wrapper">
+            <div class="hamburger-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="index.html" class="logo">
+                <!-- -->
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="WhyUs.html" class="nav-link">Why Our Villas</a>
+                <div id="dropdown">Villas
+                    <div id="dropdown-content">
+                        <a href="royal.html">Royal Spa Pool Villa</a>
+                        <a href="presidential.html">Presidential Spa Pool Villa</a>
+                        <a href="beach.html">Beach Front Pool Villa</a>
+                    </div>
+                </div>
+                <a href="contactUs.html" class="nav-link">Contact Us</a>
+                <a href="bookNow.html" class="nav-link">Book Now</a>
+            </nav>
+        </div>
+    </header>
+    <section class="villas-section">
+        <div class="villas">
+            <div class="villa royal">
+                <div class="villa-info-holder vih-royal">
+                    <h2 class="villa-heading">Royal Spa Pool Villa</h2>
+                    <div class="vih-min-info">
+                        <span class="min-info">4 Bedrooms</span>
+                        <span class="min-info">8 <i class="material-icons">group</i></span>
+                        <span class="min-info">$2350/night</span>
+                    </div>
+                    <a href="royal.html">more info</a>
+                </div>
+            </div>
+            <div class="villa presidential">
+                <div class="villa-info-holder vih-presidential">
+                    <h2 class="villa-heading">Presidential spa Pool villa</h2>
+                    <div class="vih-min-info">
+                        <span class="min-info">4 bedrooms</span>
+                        <span class="min-info">7 <i class="material-icons">group</i></span>
+                        <span class="min-info">$2200/night</span>
+                    </div>
+                    <a href="presidential.html">more info</a>
+                </div>
+            </div>
+            <div class="villa beach">
+                <div class="villa-info-holder vih-beach">
+                    <h2 class="villa-heading">Beach Front Pool Villa</h2>
+                    <div class="vih-min-info">
+                        <span class="min-info">3 bedrooms</span>
+                        <span class="min-info">7 <i class="material-icons">group</i></span>
+                        <span class="min-info">$2095/night</span>
+                    </div>
+                    <a href="beach.html">more info</a>
+                </div>
+            </div>
+            <div class="show-prev" onclick="plusDivs(-1)"></div>
+            <div class="show-next" onclick="plusDivs(1)"></div>
+            <div class="villa-nav">
+                <span class="dot" onclick="currentSlide(1)">
+                    <!-- -->
+                </span>
+                <span class="dot" onclick="currentSlide(2)">
+                    <!-- -->
+                </span>
+                <span class="dot" onclick="currentSlide(3)">
+                    <!-- -->
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="description" id="aboutUsSection">
+        <div class="wrapper">
+            <h2 class="section-heading">
+                Wellcome To Luxury Villas Elafonisi
+            </h2>
+            <div id="section-holder">
+                <p class="villas-description-text">
+                    Relax and enjoy your own private bit of paradise. These luxury beachfront villas in Crete boasts a unique location and views that will lift your heart each morning when you wake. <br> Elafonisi villas are here to offer a memorable stay for all those seeking a genuine, traditional island experience. Situated in the picturesque village of Livadia, just a short stroll from the village’s center, the villas are an incomparable, luxurious getaway, ideal for large families or group of friends wanting to experience privacy and serenity close to nature. The vast exterior of the villas welcome children to play, have fun, enjoy the sun and create the most unforgettable summer memories!
+                </p>
+                <aside class="aside-comments">
+                    "We had enjoyed the house, the view, the place, and the peace in an infinite way. Hope to come back as soon as possible to this piece of paradise. Thank you and congratulations, you create a magic place."
+                    <span>Constanza C.E. (Italy)</span>
+                </aside>
+            </div>
+            <div class="book-now-btn">
+                Book Now
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="map"></div>
+    </section>
+    <script>
+        function initMap() {
+            var elafonisi = {
+                lat: 35.2711801,
+                lng: 23.541295900000023
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: elafonisi
+            });
+            var marker = new google.maps.Marker({
+                position: elafonisi,
+                map: map
+            });
+        }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6OKeAHuNAVpWuOQffKsqsaU3d4vwpwhY&callback=initMap">
+
+
+    </script>
+    <section class="interesting" id="interesting">
+        <div class="wrapper">
+            <h2 class="section-heading">
+                Interesting topics
+            </h2>
+            <div class="slider-content">
+                <div class="box-holder">
+                    <div class="box  for-whyVilla">
+                        <img src="images/topic/whyVilla.png" class="image" />
+                        <div class="text-holder">
+                            <h3>Why choose Villa for your holliday</h3>
+                            <p>If you are planning an extra special getaway you and the family won’t forget, you might want to consider hiring a villa for the duration of your stay instead of an apartment or hotel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-holder">
+                    <div class="box  for-elafonisiBeach">
+                        <img src="images/topic/elafonisi.jpg" class="image" />
+                        <div class="text-holder">
+                            <h3>The Famous Elafonisi Beach</h3>
+                            <p>Elafonisi beach ... It lies in the southwestern side of Crete and about 75 kilometers from the town of Chania, an island that is within walking distance from the mainland, sometimes without even getting one’s toes wet. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-holder">
+                    <div class="box for-crete">
+                        <img src="images/topic/crete.jpg" class="image" />
+                        <div class="text-holder">
+                            <h3>7 Reasons you should visit Crete</h3>
+                            <p>Crete is the largest island in Greece, and the fifth largest one in the Mediterranean Sea. Here, you can admire the remnants of brilliant civilizations, explore glorious beaches, impressive mountainscapes, fertile valleys and steep gorges, and become part of the island’s rich gastronomic culture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-holder">
+                    <div class="box for-cretanCuisine">
+                        <img src="images/topic/dacos.jpg" class="image" />
+                        <div class="text-holder">
+                            <h3>Cretan Cuisine</h3>
+                            <p>Cretan Food is a journey of flavors, delicious ingredients that you would never expect to taste. Here are the the top 8 food specialties:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="wrapper">
+            <div class="footer-section site-nav">
+                <h4>Elafonisi Villas</h4>
+                <a href="index.html">Home</a>
+                <a href="WhyUs.html">Why Elafonisi Villas</a>
+                <a href="royal.html">Royal Spa Pool Villa</a>
+                <a href="presidential.html">Presidential Spa Pool Villa</a>
+                <a href="beach.html">Beach View Pool Villa</a>
+            </div>
+            <div class="footer-section contact-us">
+                <h4>Contact Us</h4>
+                <p>Svilen Darvenyashki</p>
+                <p>S.Darvenyashki & Synergates E.E.,<br> Livadia 73100 - Kissamos, Chania, Crete,<br>
+            </div>
+            <div class="footer-section find-us">
+                <h4>Find Us</h4>
+                <p>Tel: +30 6937297441,</p>
+                <p>Email: info@elafonisivillas.gr</p>
+            </div>
+            <div class="footer-section follow-us">
+                <h4>Follow Us</h4>
+                <p><a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-skype"></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="script/dropdown.js"></script>
+    <script type="text/javascript" src="script/slick.min.js"></script>
+    <script src="script/main-script.js"></script>
+    <script src="script/common.js"></script>
+    <script src="script/redirections.js"></script>
+</body>
+
+</html>

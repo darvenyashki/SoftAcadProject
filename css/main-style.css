@@ -1,0 +1,1514 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* #0000e0 - тъмносиньо
+    #2cbfd6 - светлосиньо
+#ebebeb - светлосив фон
+##707070 tymnosin shrigt
+
+*/
+
+/* Global Styles */
+
+body {
+    color: #3B5C8A;
+    /*#707070;*/
+    font-size: 18px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1050px;
+}
+
+section {
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.section-heading {
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    /*    color: #2cbfd6;*/
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.center-smth {
+    justify-content: center;
+    display: flex;
+}
+
+.side-page-section {
+    padding-bottom: 80px;
+}
+
+/* Header styles */
+
+.main-header {
+    height: 80px;
+    padding: 0 20px;
+    /*    background-color: #ededed;*/
+}
+
+.logo {
+    display: inline-block;
+    width: 242px;
+    height: 65px;
+    margin-top: 5px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main-nav {
+    position: relative;
+    float: right;
+    margin-top: 29px;
+
+}
+
+.main-nav a,
+#dropdown {
+    padding: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #3B5C8A;
+    border-right: 1px solid #9DBBDF;
+}
+
+#dropdown {
+    display: inline-block;
+    height: 22px;
+    cursor: pointer;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 10000000000000000;
+    left: 150px;
+}
+
+#dropdown-content a {
+    padding: 10px;
+    background-color: #ededed;
+    display: block;
+    border-right: none;
+    border-radius: 5px;
+    border: 1px solid #9DBBDF;
+    border-top: none;
+
+}
+
+#dropdown-content a:first-child {
+    margin-top: 10px;
+}
+
+.main-nav a:last-child {
+    border: none;
+    padding-right: 0;
+}
+
+.main-nav a:hover,
+#dropdown:hover {
+    color: #9DBBDF;
+}
+
+/* Jumbo styles */
+
+.villas-section {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.villas-section:hover {}
+
+.villa {
+    position: relative;
+    height: 580px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.royal {
+    background-image: url(../images/villas/royal/royal-1.png);
+}
+
+.presidential {
+    background-image: url(../images/villas/presidential/presidential-1.png);
+}
+
+.beach {
+    background-image: url(../images/villas/beach/beach-1.png);
+}
+
+.villa-info-holder {
+    position: absolute;
+    padding: 20px;
+    width: 360px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+
+    box-sizing: border-box;
+}
+
+.vih-royal {
+    right: 65px;
+    top: 35px;
+}
+
+.vih-presidential {
+    left: 300px;
+    top: 40px;
+}
+
+.vih-beach {
+    top: 30px;
+    left: 80px;
+}
+
+.villa-heading {
+    font-size: 45px;
+    color: #ededed;
+    text-transform: capitalize;
+}
+
+.vih-min-info {
+    margin-bottom: 12px;
+}
+
+.min-info {
+    padding-right: 5px;
+    border-right: 1px solid #fff;
+    color: #fff;
+}
+
+.min-info:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.material-icons {
+    vertical-align: bottom;
+}
+
+.villa-info-holder a {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.villa-info-holder a:hover {
+    background-color: rgba(112, 112, 112, .5);
+}
+
+.show-prev,
+.show-next,
+.slick-prev,
+.slick-next {
+    position: absolute !important;
+    display: none;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    border: solid aliceblue;
+    border-width: 0 5px 5px 0;
+    transition: background-color 0.6s ease;
+}
+
+.show-prev {
+    left: 20px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+
+}
+
+.show-next {
+    right: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+.villa-nav {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.6s ease;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot:hover {
+    background-color: red;
+}
+
+.villa {
+    animation-name: fade;
+    animation-duration: .5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Villas Description Styles */
+
+.description {
+    overflow: hidden;
+    position: relative;
+    padding-top: 80px;
+}
+
+#section-holder {
+    overflow: hidden;
+}
+
+.villas-description-text {
+    float: left;
+    width: 650px;
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+.aside-comments {
+    float: right;
+    width: 300px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.aside-comments span {
+    display: block;
+    float: right;
+    margin-top: 20px;
+}
+
+.book-now-btn {
+    width: 300px;
+    height: 50px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    color: #fff;
+    background-color: rgba(157, 187, 223, 1);
+    border: 1px solid rgba(157, 187, 223, 1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.slick-arrow {
+    display: none !important;
+}
+.book-now-btn:hover {
+    border: 1px solid #3B5C8A;
+    color: #3B5C8A;
+    opacity: .8;
+}
+
+.other-villas {
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+.slick-list {
+    overflow: hidden;
+}
+#map {
+    width: 100%;
+    height: 580px;
+}
+
+/* Interesting topics styles */
+
+.interesting {
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.box-holder {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box-holder:last-child {
+    margin-right: 0
+}
+
+.box {
+    height: 400px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid navy;
+}
+
+.box:hover {
+    opacity: .5;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-holder {
+    padding: 0 10px;
+}
+
+.or {
+    display: block;
+    font-size: 30px;
+    margin: 10px auto;
+
+}
+
+.slick-prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 25px;
+}
+
+.slick-next {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 25px;
+}
+
+.slick-prev,
+.slick-next {
+    width: 30px;
+    height: 30px;
+    z-index: 100;
+    border: solid #3B5C8A;
+    border-width: 0 5px 5px 0;
+}
+
+/* FOOTER STYLES */
+
+.main-footer {
+    height: 200px;
+    background-color: #3B5C8A;
+    color: #fff;
+}
+
+.footer-section {
+    float: left;
+    padding: 0 20px;
+    margin-top: 30px;
+    width: 25%;
+    height: 140px;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 1px solid #fff;
+    vertical-align: middle;
+}
+
+.footer-section:last-child {
+    border-right: 0;
+}
+
+.footer-section h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa {
+    padding: 14px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    display: inline-block !important;
+    color: #3B5C8A !important;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* Why US Styles */
+
+.explore-villas {
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.some-section {
+    overflow: hidden;
+}
+
+.some-holder {
+    position: relative;
+    height: 450px;
+    margin-bottom: 50px;
+}
+
+.some-holder:last-child {
+    margin-bottom: 0;
+}
+
+.text-content {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #fff;
+    background-color: rgba(157, 187, 223, .9);
+    text-align: center;
+}
+
+.text-content h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.why-us {
+    overflow: hidden;
+}
+
+.why-us-image {
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+
+
+/* page VILLA Styles */
+
+.villa-info {
+    overflow: hidden;
+}
+
+.villa-info-text {
+    text-align: center;
+}
+
+.villa-info-add-text {
+    margin-top: 40px;
+}
+
+.villa-bottom-text {
+    float: left;
+    padding: 10px;
+    width: 20%;
+    height: 80px;
+    text-align: center;
+    border-right: 1px solid #3B5C8A;
+    box-sizing: border-box;
+}
+
+.villa-bottom-text:last-child {
+    border-right: 0;
+}
+
+.villa-bottom-text h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.exterior-btn,
+.interior-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.separator {
+    margin: 0 50px 10px 50px;
+    font-size: 30px;
+}
+
+.interior-holder {
+    display: none;
+}
+
+.images img {
+    width: auto;
+    height: 580px;
+}
+
+.images-nav {
+/*
+    width: 1050px;
+    height: 80px;
+*/  overflow: hidden;
+    margin: 0 auto;
+}
+
+.images-nav img {
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+
+/*
+.two-villas {
+    margin-left: 175px;
+}
+*/
+
+
+
+/* Services */
+
+.services {
+    overflow: hidden;
+    /*    background-color: #ededed;*/
+}
+
+.services-types.left {
+    float: left;
+}
+
+.services-types.right {
+    float: left;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.services-types div {
+    display: table-row;
+}
+
+.service-answer,
+.a-s {
+    display: table-cell;
+    font-size: 18px;
+}
+
+.a-s {
+    font-weight: bold;
+}
+
+
+/* Why choose Villa.html styles */
+
+.side-page-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.side-image {
+    width: 450px;
+}
+
+.sp-p {
+    margin-bottom: 20px;
+}
+
+figcaption {
+    margin-top: -5px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(112, 112, 112, .5);
+}
+
+.for-villa {
+    width: 33.33%;
+}
+
+/* Cretan Cuisine Styles */
+.first-img-cc {
+    background-image: url(../images/topic/cretanCuisine/dacos.jpg);
+}
+.second-img-cc {
+    background-image: url(../images/topic/cretanCuisine/snails.jpg);
+}
+.third-img-cc {
+    background-image: url(../images/topic/cretanCuisine/lamb.jpg);
+}
+.fourth-img-cc {
+    background-image: url(../images/topic/cretanCuisine/raki.jpg);
+}
+/* CONTACT US STYLES AND BOOK NOW STYLES */
+
+.contact-us-section {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.contact-holder {
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#contactUsForm {
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 400px;
+
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #3B5C8A;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.booked-wzs-250-175.weather-customize {
+    margin-bottom: 40px !important;
+    background-color: #3B5C8A !important;
+}
+
+#book-now-section {
+    padding-bottom: 80px;
+}
+
+#bookNowForm {
+    position: relative;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #3B5C8A;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.ui-helper-clearfix:after {
+    content: none !important;
+}
+.tooltip-templates {
+    display: none;
+}
+
+.tooltip-images {
+    width: 200px;
+    height: 150px;
+}
+
+.tooltip-content {
+    text-align: center;
+    width: 200px;
+    height: auto;
+    font-size: 14px;
+}
+
+.chose-villa {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.form-heading {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.book-villa {
+    float: left;
+    width: 33.33%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.book-villa h4 {
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.book-villa img {
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+
+.book-price {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+}
+
+.stay-price {
+    display: none;
+    color: #fff;
+    float: left;
+}
+
+.bigger {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#chosenVilla {
+    font-style: italic;
+}
+
+#totalPrice {
+    text-decoration: underline;
+}
+
+.book-info {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+
+}
+
+#bdFirstName,
+#bdLastName {
+    margin-left: 10px;
+}
+
+.bd-line {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.user-text {
+    font-size: 22px;
+}
+
+.book-date {
+    width: 220px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.book-date div {
+    float: left;
+    width: 100px
+}
+
+.book-date div:first-child {
+    margin-right: 20px;
+}
+
+#nights {
+    margin-right: 20px;
+}
+
+.form-entry-holder {
+    position: relative;
+    margin: 22px 0;
+
+}
+
+.form-entry-holder:first-child {
+    margin-top: 0;
+}
+
+.text-entry {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 15px;
+    border: 1px solid #3b5c8a;
+    border-radius: 5px;
+    color: #3b5c8a;
+    box-sizing: border-box;
+
+}
+
+.textarea-entry {
+    height: 140px;
+    padding: 10px 0 0 10px;
+}
+
+.title {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.mini-text {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.warning-text {
+    color: red;
+}
+#cardHolder {
+    text-transform: uppercase;
+}
+
+.security-code-holder {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.exp-date {
+    width: 110px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.exp-date-text {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin: 2px auto;
+}
+
+.exp-date-holder {
+    float: left;
+    width: 50px;
+}
+
+.exp-date-holder:first-child {
+    margin-right: 10px;
+}
+
+.t-c {
+    float: left;
+    margin-top: 10px;
+    /*    position: absolute;*/
+    /*    left: 30px;*/
+    /*    bottom: 30px;*/
+    color: #fff;
+}
+
+.t-c span {
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.text-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    padding: 0 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    color: #707070;
+    cursor: text;
+    font-size: 18px;
+    transition: top .5s
+}
+
+.active {
+    top: -15px;
+    color: #9DBBDF;
+}
+
+.filled {
+    color: #3b5c8a;
+    border: 1px solid #3b5c8a;
+    border-radius: 5px;
+}
+
+.security-code-label {
+    left: 430px;
+}
+
+.form-btn {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #9DBBDF;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: default;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid yellow;
+    background-color: #9DBBDF;
+    border-radius: 10px;
+
+}
+
+.next {
+    float: right;
+}
+
+.prev {
+    float: left;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+}
+
+section:first-child {
+    display: none;
+}
+
+
+/* ELAFONISI BEACH */
+
+.side-page-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.first-img-eb {
+    background-image: url(../images/topic/elafonisiBeach/elafonisi-1.jpg);
+    background-position: top;
+}
+
+.second-img-eb {
+    background-image: url(../images/topic/elafonisiBeach/elafonisi-2.jpg);
+}
+
+.third-img-eb {
+    background-image: url(../images/topic/elafonisiBeach/elafonisi-3.jpg);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(112, 112, 112, .8);
+}
+
+.page-top {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.page-back {
+    display: none;
+
+    /*  
+            position: fixed;
+            left: 10px;
+            bottom: 210px;
+*/
+    cursor: pointer;
+
+}
+
+.page-back img,
+.page-top img {
+    float: left;
+    width: 81px;
+    height: 50px;
+}
+
+.page-back p,
+.page-top p {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 0 auto 200px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-text-heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+/* RESPONSIVE */
+
+.hamburger-btn {
+    display: none;
+    width: 30px;
+    float: right;
+}
+
+.hamburger-btn div {
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+    .main-header {
+        padding: 0 20px;
+    }
+    .main-nav {
+        display: none;
+        float: none;
+        width: 100%;
+        margin-left: -20px;
+        z-index: 1000;
+    }
+    .main-nav a,
+    #dropdown {
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding-left: 20px;
+        line-height: 60px;
+        font-size: 25px;
+        border: 1px solid #000;
+        z-index: 10000;
+        background-color: aliceblue;
+    }
+    .main-nav a:first-child,
+    .main-nav a:last-child,
+    #dropdown {
+        background-color: #9DBBDF !important;
+        color: #fff;
+    }
+    #dropdown-content a:first-child {
+        margin-top: 0;
+    }
+    #dropdown-content a:nth-child(2) {
+        background-color: aliceblue;
+    }
+    #dropdown-content a {
+        width: 100%;
+        padding: 5px 10px;
+        height: 50px;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    .main-nav a:last-child {
+        border: 1px solid #000;
+        padding-right: 10px;
+    }
+    .logo {
+        display: inline-block;
+        width: 50%;
+    }
+    .hamburger-btn {
+        display: inline-block;
+        float: right;
+        margin-top: 15px;
+    }
+    .villa {
+        width: 100%;
+        height: 250px;
+    }
+    .villa-info-holder {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgb(157, 187, 223);
+    }
+    .vih-royal,
+    .vih-presidential,
+    .vih-beach {
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .villa-heading,
+    .vih-min-info {
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: -5px;
+    }
+    .villa-info-holder a {
+        width: 50%;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .villas-description-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .villa-nav,
+    .show-prev,
+    .show-next {
+        display: inline-block !important;
+    }
+    #map {
+        height: 290px;
+    }
+
+    /*            WHY ELAFONISI VILLAS RESPONSIVE */
+    .some-holder {
+        margin-bottom: 0;
+    }
+    .why-us-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .text-content {
+        top: 160px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        font-size: 15px;
+        /*                opacity: .8;*/
+    }
+    .text-content h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .box-holder {
+        width: 100%;
+    }
+
+    /*    VILLAS RESPONSIVE */
+    .villa-info-text {
+        width: 100%;
+    }
+    .villa-info-add-text {
+        overflow: hidden;
+        text-align: center;
+    }
+    .villa-gallery {
+        overflow: hidden;
+    }
+    .villa-bottom-text {
+        width: 50%;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+    .villa-bottom-text:last-child {
+        margin-left: 25%;
+    }
+    .villa-bottom-text:nth-child(even) {
+        border-right: 0;
+    }
+    .images img {
+        width: 100%;
+        height: auto;
+    }
+    .images-nav {
+        width: 100%;
+    }
+    .a-s {
+        font-size: 15px;
+    }
+    .services-types.right {
+        margin-left: 0;
+    }
+    /*    CONTACT US RESPONSIVE */
+    .contact-holder,
+    .contact-us,
+    #contactUsForm {
+        width: 100%;
+
+    }
+    #ui-datepicker-div,
+    .ui-datepicker-calendar tbody {
+        width: 80% !important;
+        
+    }
+    .ui-datepicker table {
+        font-size: 0.8em !important;
+    }
+    .contact-holder {
+        margin-top: -30px;
+    }
+    .booked-wzs-250-175.weather-customize {
+        width: 100% !important;
+    }
+    /*    BOOK NOW RESPONSIVE */
+    #book-now-section,
+    #nav,
+    #bookNowForm {
+        width: 100%;
+    }
+    .book-villa h4,
+    .book-villa span {
+        font-size: 18px;
+    }
+    .book-villa img {
+        height: auto;
+
+    }
+    .form-btn {
+        width: 25%;
+        font-size: 15px;
+        margin: 5px;
+    }
+    .book-villa {
+        width: 100%;
+    }
+    .stay-price {
+        font-size: 17px;
+    }
+    .t-c {
+        width: 50%;
+    }
+    .submit {
+        margin-top: 40px;
+    }
+    /*    FOOTER RESPONSIVE */
+    .main-footer {
+        height: 600px;
+    }
+    .footer-section {
+        width: 100%;
+        height: auto;
+        border-right: 0;
+    }
+    .side-page-section h3,
+    .sp-p {
+        width: 100%;
+    }
+    .side-image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .logo {
+        width: 150px;
+        height: 50px;
+        margin-left: -30px;
+        margin-top: 15px;
+    }
+    .main-nav {
+        float: right;
+        display: inline-block;
+    }
+    .main-nav a,
+    #dropdown {
+        font-size: 12px;
+        border-right: 0;
+        padding: 0 4px;
+    }
+    .villas-section {
+        width: 100%;
+    }
+    .vih-royal,
+    .vih-presidential,
+    .vih-beach {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .villa-heading {
+        font-size: 26px;
+    }
+    .min-info {
+        font-size: 15px;
+    }
+    .villa-nav,
+    .show-prev,
+    .show-next {
+        display: inline-block !important;
+    }
+    .villas-description-text {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .aside-comments {
+        float: none;
+        width: auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .villa-info-text {
+        width: 100%;
+    }
+    .villa-gallery {
+        overflow: hidden;
+    }
+    .images img {
+        height: 400px;
+    }
+    .images-nav {
+        width: 100%;
+    }
+    #contactUsForm {
+        width: 100%;
+    }
+    .some-section {
+        width: 100%;
+    }
+    .contact-holder {
+
+        width: 100%;
+        margin-top: -30px;
+    }
+    .main-footer {
+        height: 350px;
+    }
+    .footer-section {
+        width: 50%;
+    }
+    .footer-section:nth-child(2) {
+        border-right: 0;
+    }
+    .side-page-section {
+        width: 100%;
+    }
+
+}
