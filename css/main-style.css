@@ -3,18 +3,10 @@
     margin: 0;
 }
 
-/* #0000e0 - тъмносиньо
-    #2cbfd6 - светлосиньо
-#ebebeb - светлосив фон
-##707070 tymnosin shrigt
-
-*/
-
 /* Global Styles */
 
 body {
     color: #3B5C8A;
-    /*#707070;*/
     font-size: 18px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +29,6 @@ section {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
-    /*    color: #2cbfd6;*/
 }
 
 .float-left {
@@ -64,7 +55,6 @@ section {
 .main-header {
     height: 80px;
     padding: 0 20px;
-    /*    background-color: #ededed;*/
 }
 
 .logo {
@@ -102,7 +92,7 @@ section {
 #dropdown-content {
     display: none;
     position: absolute;
-    z-index: 10000000000000000;
+    z-index: 99999999999;
     left: 150px;
 }
 
@@ -168,7 +158,6 @@ section {
     width: 360px;
     text-align: center;
     background-color: rgba(0, 0, 0, .4);
-
     box-sizing: border-box;
 }
 
@@ -607,10 +596,7 @@ section {
 }
 
 .images-nav {
-/*
-    width: 1050px;
-    height: 80px;
-*/  overflow: hidden;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -620,19 +606,10 @@ section {
 }
 
 
-/*
-.two-villas {
-    margin-left: 175px;
-}
-*/
-
-
-
 /* Services */
 
 .services {
     overflow: hidden;
-    /*    background-color: #ededed;*/
 }
 
 .services-types.left {
@@ -955,9 +932,6 @@ figcaption {
 .t-c {
     float: left;
     margin-top: 10px;
-    /*    position: absolute;*/
-    /*    left: 30px;*/
-    /*    bottom: 30px;*/
     color: #fff;
 }
 
@@ -1090,12 +1064,6 @@ section:first-child {
 
 .page-back {
     display: none;
-
-    /*  
-            position: fixed;
-            left: 10px;
-            bottom: 210px;
-*/
     cursor: pointer;
 
 }
@@ -1304,7 +1272,6 @@ section:first-child {
         padding: 5px;
         box-sizing: border-box;
         font-size: 15px;
-        /*                opacity: .8;*/
     }
     .text-content h3 {
         margin-top: 10px;
