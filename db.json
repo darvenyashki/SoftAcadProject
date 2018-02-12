@@ -1,11 +1,10 @@
-+{
-+  "posts": [
-+    {
-+      "id": 1,
-+      "title": "hello"
-+    }
-+  ],
-+  "profile": {
-+    "name": "typicode"
-+  }
-+}
+{
+  "posts": [
+{"Title":"Fame","Year":"1980","Genre":"Drama","Director":"Alan Parker"},
+ {[{"Title":"Fame","Year":"1980","Genre":"Drama","Director":"Alan Parker"},
+{"Title":"S.O.B.","Year":"1981","Genre":"Comedy","Director":"Blake Edwards"}
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
