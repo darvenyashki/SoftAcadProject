@@ -1,5 +1,11 @@
-{  
-    "id": 1,
-    "fName": "Ivan",
-    "lName": "Petrov"
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
